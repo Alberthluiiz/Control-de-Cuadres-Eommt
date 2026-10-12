@@ -1,0 +1,1 @@
+console.log("Proyecto cuadre de cajas Auxiliares de ventas");
