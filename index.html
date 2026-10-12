@@ -11,8 +11,135 @@
 </head>
 
 <body>
+    <!-- Descripcion del Proyecto e informacion -->
+    <section>
+        <p>EOMMT : Estaciones</p>
+        <p>Control de Cuadres</p>
+    </section>
 
-    <h1>Control de Cuadres</h1>
+    <!-- Turnos cuadres descuadres y porcentaje y mes actual diseño -->
+    <section>
+        <div class="eficiencia-header">
+            <span class="eficiencia-titulo">Eficiencia del mes</span>
+
+            <div class="selector-mes">
+                <button type="button" class="btn-flecha" id="mes-anterior" aria-label="Mes anterior">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M15 6l-6 6 6 6" />
+                    </svg>
+                </button>
+
+                <span class="mes-texto" id="mes-texto">Oct 2026</span>
+
+                <button type="button" class="btn-flecha" id="mes-siguiente" aria-label="Mes siguiente">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M9 6l6 6-6 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="eficiencia-cuerpo">
+            <div class="anillo">
+                <svg width="104" height="104" viewBox="0 0 104 104">
+                    <circle class="anillo-fondo" cx="52" cy="52" r="42" />
+                    <circle class="anillo-progreso" id="anillo-progreso" cx="52" cy="52" r="42" />
+                </svg>
+                <span class="anillo-texto" id="porcentaje">0%</span>
+            </div>
+
+            <div class="eficiencia-info">
+                <span class="eficiencia-mensaje" id="mensaje">Aún sin turnos</span>
+                <span class="eficiencia-detalle">Turnos cuadrados sobre el total registrado este mes.</span>
+            </div>
+        </div>
+
+        <div class="contadores">
+            <div class="contador">
+                <span class="contador-etiqueta">Turnos</span>
+                <span class="contador-numero" id="total-turnos">0</span>
+            </div>
+            <div class="contador">
+                <span class="contador-etiqueta">Cuadrados</span>
+                <span class="contador-numero verde" id="total-cuadrados">0</span>
+            </div>
+            <div class="contador">
+                <span class="contador-etiqueta">Descuadres</span>
+                <span class="contador-numero rojo" id="total-descuadres">0</span>
+            </div>
+        </div>
+
+    </section>
+
+    <br>
+    <!-- Registro de Turnos -->
+    <form method="post">
+        <fieldset>
+            <legend>Registro de Turnos</legend>
+
+            <label>Fecha
+                <input type="date">
+            </label>
+
+            <label>Estacion
+                <select name="opciones" id="">
+                    <option value="#">Quitumbe</option>
+                    <option value="#">Moran Valverde</option>
+                    <option value="#">Solanda</option>
+                    <option value="#">Cardenal de la Torres</option>
+                    <option value="#">Recreo</option>
+                    <option value="#">Magdalena</option>
+                    <option value="#">San Francisco</option>
+                    <option value="#">Alameda</option>
+                    <option value="#">Ejido</option>
+                    <option value="#">Universidad Central</option>
+                    <option value="#">pradera</option>
+                    <option value="#">Carolina</option>
+                    <option value="#">Iñaquito</option>
+                    <option value="#">Jipijapa</option>
+                    <option value="#">Labrador</option>
+                </select>
+            </label>
+
+            <label>Turno
+                <input type="submit" value="Fijo">
+                <input type="submit" value="Reserva">
+            </label>
+
+            <label>Resultado de Cuadre
+                <button>Cuadrada</button>
+                <button>No Cuadrada</button>
+            </label>
+
+            <label>Codigo OT/Observacion
+                <input type="text" name="" id="" placeholder="Ej: OT-123456789 - Luis Guillen">
+            </label>
+            <br>
+
+            <button>Guardar</button>
+        </fieldset>
+    </form>
+
+    <!-- Mostrar Datos -->
+    <section>
+        <div>
+            <h3>Historial</h3>
+            <button>Exportar CVS</button>
+        </div>
+
+        <div>
+            <p>Moran Valverde</p>
+            <p>08/10/2026 . turno Fijo</p>
+        </div>
+
+        <div>
+            <button>Cuadrada</button>
+        </div>
+
+    </section>
+
 
 </body>
 
